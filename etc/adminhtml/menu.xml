@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_PromoCountdown
+ * @link https://github.com/Goomento/PromoCountdown
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Goomento_PromoCountdown::maintext"
+             title="Promo Countdown"
+             module="Goomento_PromoCountdown"
+             sortOrder="4"
+             parent="Goomento_Base::menu"
+             resource="Goomento_PromoCountdown::maintext"/>
+
+        <add id="Goomento_PromoCountdown::config"
+             title="Configuration"
+             module="Goomento_PromoCountdown"
+             sortOrder="1"
+             parent="Goomento_PromoCountdown::maintext"
+             action="adminhtml/system_config/edit/section/goomento_promo_countdown"
+             resource="Goomento_PromoCountdown::config"
+             />
+    </menu>
+</config>

@@ -1,0 +1,27 @@
+<?php
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_PromoCountdown
+ * @link https://github.com/Goomento/PromoCountdown
+ */
+
+/** @var \Goomento\PromoCountdown\Block\Countdown\Display $block */
+if ($block->couldShow()) :
+    ?>
+    <div class="promo_countdown">
+    <?php
+    $title = \Goomento\PromoCountdown\Helper\Config::staticConfigGet('title');
+    if ($title):
+    ?>
+        <p class="promo_countdown-title"><?= $this->escapeHtml($title) ?></p>
+    <?php
+    endif;
+    ?>
+    <div class="promo_countdown-content"
+         data-mage-init='{ "promo_countdown": <?= $block->getCountdownJsConfig() ?> }'></div>
+    </div>
+    <br />
+<?php
+endif;
+?>

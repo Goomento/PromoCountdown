@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_PromoCountdown
+ * @link https://github.com/Goomento/PromoCountdown
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="goomento_promo_countdown" translate="label" type="text" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Goomento_PromoCountdown::config</resource>
+            <label>Promo Countdown</label>
+            <tab>goomento</tab>
+            <group id="general" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="active" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Active</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label comment" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Title</label>
+                    <depends>
+                        <field id="*/*/active">1</field>
+                    </depends>
+                </field>
+                <field id="product_list" translate="label comment" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Show In Product List</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/active">1</field>
+                    </depends>
+                </field>
+                <field id="loading_bar" translate="label comment" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Show Progress Bar</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/active">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="style" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Style</label>
+                <depends>
+                    <field id="goomento_promo_countdown/general/active">1</field>
+                </depends>
+                <field id="bg_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Background Color</label>
+                    <frontend_model>Goomento\Base\Block\System\Config\ColorPicker</frontend_model>
+                </field>
+                <field id="loading_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Progress Bar Color</label>
+                    <frontend_model>Goomento\Base\Block\System\Config\ColorPicker</frontend_model>
+                </field>
+                <field id="message" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Message when timeout</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

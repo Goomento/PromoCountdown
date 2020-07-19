@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_PromoCountdown
+ * @link https://github.com/Goomento/PromoCountdown
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <goomento_promo_countdown>
+            <general>
+                <active>0</active>
+                <title>Promotion will expire after</title>
+                <product_list>0</product_list>
+                <loading_bar>1</loading_bar>
+            </general>
+            <style>
+                <bg_color>#BDC3C7</bg_color>
+                <loading_color>#C0392B</loading_color>
+                <message>Promotion expired.</message>
+            </style>
+        </goomento_promo_countdown>
+    </default>
+</config>

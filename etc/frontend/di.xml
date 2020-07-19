@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_PromoCountdown
+ * @link https://github.com/Goomento/PromoCountdown
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Goomento\Base\Model\ConfigBuilderProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="promo_countdown" xsi:type="string">Goomento\PromoCountdown\Ui\ConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

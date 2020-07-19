@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_PromoCountdown
+ * @link https://github.com/Goomento/PromoCountdown
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <referenceBlock name="category.product.addto">
+                <block ifconfig="goomento_promo_countdown/general/product_list"
+                       class="Goomento\PromoCountdown\Block\Countdown\Display"
+                       name="Goomento.PromoCountdown.countdown.product_list"
+                       as="countdown"
+                       after="-"/>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>
